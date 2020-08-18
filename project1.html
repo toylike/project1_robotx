@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="project1.css">
+</head>
+<body>
+	<svg display = 'none'>
+		<symbol id = "facebook" viewBox="0 0 512 512">
+				<g>
+					<path d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"/>
+				</g>
+		</symbol>
+		<symbol id = "twitter" viewBox="-21 -81 681.33464 681">
+				<g>
+					<path d="m200.964844 515.292969c241.050781 0 372.871094-199.703125 372.871094-372.871094 0-5.671875-.117188-11.320313-.371094-16.9375 25.585937-18.5 47.824218-41.585937 65.371094-67.863281-23.480469 10.441406-48.753907 17.460937-75.257813 20.636718 27.054687-16.230468 47.828125-41.894531 57.625-72.488281-25.320313 15.011719-53.363281 25.917969-83.214844 31.808594-23.914062-25.472656-57.964843-41.402344-95.664062-41.402344-72.367188 0-131.058594 58.6875-131.058594 131.03125 0 10.289063 1.152344 20.289063 3.398437 29.882813-108.917968-5.480469-205.503906-57.625-270.132812-136.921875-11.25 19.363281-17.742188 41.863281-17.742188 65.871093 0 45.460938 23.136719 85.605469 58.316407 109.082032-21.5-.660156-41.695313-6.5625-59.351563-16.386719-.019531.550781-.019531 1.085937-.019531 1.671875 0 63.46875 45.171875 116.460938 105.144531 128.46875-11.015625 2.996094-22.605468 4.609375-34.558594 4.609375-8.429687 0-16.648437-.828125-24.632812-2.363281 16.683594 52.070312 65.066406 89.960937 122.425781 91.023437-44.855469 35.15625-101.359375 56.097657-162.769531 56.097657-10.5625 0-21.003906-.605469-31.2617188-1.816407 57.9999998 37.175781 126.8710938 58.871094 200.8867188 58.871094"/>
+				</g>
+		</symbol>
+		<symbol id = "linkedin" viewBox="-21 -35 682.66669 682">
+				<g>
+					<path d="m77.613281-.667969c-46.929687 0-77.613281 30.816407-77.613281 71.320313 0 39.609375 29.769531 71.304687 75.8125 71.304687h.890625c47.847656 0 77.625-31.695312 77.625-71.304687-.894531-40.503906-29.777344-71.320313-76.714844-71.320313zm0 0"/><path d="m8.109375 198.3125h137.195313v412.757812h-137.195313zm0 0"/><path d="m482.054688 188.625c-74.011719 0-123.640626 69.546875-123.640626 69.546875v-59.859375h-137.199218v412.757812h137.191406v-230.5c0-12.339843.894531-24.660156 4.519531-33.484374 9.917969-24.640626 32.488281-50.167969 70.390625-50.167969 49.644532 0 69.5 37.851562 69.5 93.339843v220.8125h137.183594v-236.667968c0-126.78125-67.6875-185.777344-157.945312-185.777344zm0 0"/>
+				</g>
+		</symbol>
+		<symbol id = "google_plus" viewBox="0 0 24 24">
+				<g>
+					<path d="m21.823 9h-2.187v2.177h-2.177v2.187h2.177v2.177h2.187v-2.177h2.177v-2.187h-2.177z"/><path d="m7.5 19.5c4.328 0 7.203-3.038 7.203-7.326 0-.491-.051-.87-.122-1.248h-7.08v2.578h4.257c-.174 1.095-1.289 3.233-4.257 3.233-2.557 0-4.645-2.118-4.645-4.737s2.087-4.738 4.645-4.738c1.463 0 2.435.624 2.988 1.156l2.036-1.954c-1.311-1.227-2.999-1.964-5.025-1.964-4.144 0-7.5 3.356-7.5 7.5s3.356 7.5 7.5 7.5z"/>
+				</g>
+		</symbol>
+		<symbol id="world" viewBox="0 0 31.416 31.416">
+			<g>
+				<path d="M28.755,6.968l-0.47,0.149L25.782,7.34l-0.707,1.129l-0.513-0.163L22.57,6.51l-0.289-0.934L21.894,4.58l-1.252-1.123
+					l-1.477-0.289l-0.034,0.676l1.447,1.412l0.708,0.834L20.49,6.506l-0.648-0.191L18.871,5.91l0.033-0.783l-1.274-0.524l-0.423,1.841
+					l-1.284,0.291l0.127,1.027l1.673,0.322l0.289-1.641l1.381,0.204l0.642,0.376h1.03l0.705,1.412l1.869,1.896l-0.137,0.737
+					l-1.507-0.192l-2.604,1.315l-1.875,2.249l-0.244,0.996h-0.673l-1.254-0.578l-1.218,0.578l0.303,1.285l0.53-0.611l0.932-0.029
+					l-0.065,1.154l0.772,0.226l0.771,0.866l1.259-0.354l1.438,0.227l1.67,0.449l0.834,0.098l1.414,1.605l2.729,1.605l-1.765,3.372
+					l-1.863,0.866l-0.707,1.927l-2.696,1.8l-0.287,1.038c6.892-1.66,12.019-7.851,12.019-15.253
+					C31.413,12.474,30.433,9.465,28.755,6.968z"/>
+				<path d="M17.515,23.917l-1.144-2.121l1.05-2.188l-1.05-0.314l-1.179-1.184l-2.612-0.586l-0.867-1.814v1.077h-0.382l-2.251-3.052
+			v-2.507L7.43,8.545L4.81,9.012H3.045L2.157,8.43L3.29,7.532L2.16,7.793c-1.362,2.326-2.156,5.025-2.156,7.916
+			c0,8.673,7.031,15.707,15.705,15.707c0.668,0,1.323-0.059,1.971-0.137l-0.164-1.903c0,0,0.721-2.826,0.721-2.922
+			C18.236,26.357,17.515,23.917,17.515,23.917z"/>
+				<path d="M5.84,5.065l2.79-0.389l1.286-0.705l1.447,0.417l2.312-0.128l0.792-1.245l1.155,0.19l2.805-0.263L19.2,2.09l1.09-0.728
+			l1.542,0.232l0.562-0.085C20.363,0.553,18.103,0,15.708,0C10.833,0,6.474,2.222,3.596,5.711h0.008L5.84,5.065z M16.372,1.562
+			l1.604-0.883l1.03,0.595l-1.491,1.135l-1.424,0.143l-0.641-0.416L16.372,1.562z M11.621,1.691l0.708,0.295l0.927-0.295
+			l0.505,0.875l-2.14,0.562l-1.029-0.602C10.591,2.526,11.598,1.878,11.621,1.691z"/>
+			</g>
+		</symbol>
+		<symbol id = "bulb" viewBox="-103 0 512 512.00112">
+				<g>
+					<path d="m172.914062 512h-38.902343c-17.597657 0-32.863281-11.921875-37.128907-28.988281l-2.902343-11.605469c-.640625-2.550781-.066407-5.246094 1.554687-7.320312 1.621094-2.074219 4.09375-3.285157 6.722656-3.285157h102.398438c2.628906 0 5.113281 1.210938 6.726562 3.285157 1.613282 2.074218 2.191407 4.769531 1.550782 7.320312l-2.898438 11.605469c-4.257812 17.066406-19.523437 28.988281-37.121094 28.988281zm-59.714843-34.132812.253906 1.007812c2.363281 9.453125 10.820313 16.058594 20.566406 16.058594h38.902344c9.746094 0 18.203125-6.605469 20.566406-16.058594l.246094-1.007812zm0 0"/><path d="m204.742188 477.867188h-102.398438c-14.113281 0-25.601562-11.484376-25.601562-25.597657v-68.269531c0-4.710938 3.824218-8.53125 8.535156-8.53125h136.53125c4.710937 0 8.535156 3.820312 8.535156 8.53125v68.269531c0 14.113281-11.484375 25.597657-25.601562 25.597657zm-110.933594-85.332032v59.734375c0 4.699219 3.824218 8.53125 8.535156 8.53125h102.398438c4.710937 0 8.535156-3.832031 8.535156-8.53125v-59.734375zm0 0"/><path d="m221.808594 392.535156h-136.53125c-1.871094 0-3.679688-.613281-5.164063-1.742187-20.582031-15.648438-28.96875-42.339844-28.96875-92.125 0-25.292969-23.851562-73.320313-33.042969-89.683594-31.085937-67.925781-16.375-114.945313 1.375-142.535156 26.4375-41.078125 78.148438-66.644531 134.007813-66.449219l.222656 8.535156-.019531-8.535156h.308594c56.105468 0 107.316406 25.4375 133.699218 66.449219 17.757813 27.589843 32.460938 74.609375 1.699219 141.902343-.648437 1.21875-33.355469 59.871094-33.355469 90.316407 0 49.730469-8.425781 76.425781-29.066406 92.125-1.484375 1.128906-3.300781 1.742187-5.164062 1.742187zm-133.511719-17.066406h130.476563c14.308593-12.46875 20.1875-35.097656 20.1875-76.800781 0-34.894531 33.785156-95.480469 35.226562-98.046875 21.496094-47.089844 21.316406-90.503906-.84375-124.945313-23.269531-36.15625-68.984375-58.609375-119.347656-58.609375-.171875 0-.332032 0-.460938 0-.09375 0-.195312 0-.300781 0-50.4375 0-96.144531 22.445313-119.414063 58.609375-22.160156 34.441407-22.339843 77.855469-.527343 125.566407 1.125 1.945312 34.917969 62.53125 34.917969 97.425781 0 41.746093 5.851562 64.375 20.085937 76.800781zm-32.988281-277.34375c-1.578125 0-3.175782-.433594-4.609375-1.355469-3.96875-2.542969-5.109375-7.824219-2.566407-11.792969 19.839844-30.882812 61.078126-50.84375 105.050782-50.84375 4.710937 0 8.535156 3.824219 8.535156 8.535157 0 4.710937-3.824219 8.53125-8.535156 8.53125-38.3125 0-73.914063 16.878906-90.691406 43.011719-1.628907 2.53125-4.378907 3.914062-7.183594 3.914062zm0 0"/><path d="m187.761719 281.601562h-68.265625c-4.710938 0-8.535156-3.824218-8.535156-8.535156 0-4.710937 3.824218-8.53125 8.535156-8.53125h68.265625c4.710937 0 8.535156 3.820313 8.535156 8.53125 0 4.710938-3.816406 8.535156-8.535156 8.535156zm0 0"/><path d="m187.761719 315.734375h-68.265625c-4.710938 0-8.535156-3.824219-8.535156-8.535156 0-4.707031 3.824218-8.53125 8.535156-8.53125h68.265625c4.710937 0 8.535156 3.824219 8.535156 8.53125 0 4.710937-3.816406 8.535156-8.535156 8.535156zm0 0"/><path d="m187.761719 349.867188h-68.265625c-4.710938 0-8.535156-3.824219-8.535156-8.53125 0-4.710938 3.824218-8.535157 8.535156-8.535157h68.265625c4.710937 0 8.535156 3.824219 8.535156 8.535157 0 4.707031-3.816406 8.53125-8.535156 8.53125zm0 0"/>
+				</g>
+		</symbol>
+		<symbol id = "clock" viewBox="0 0 97.16 97.16">
+				<g>
+					<path d="M48.58,0C21.793,0,0,21.793,0,48.58s21.793,48.58,48.58,48.58s48.58-21.793,48.58-48.58S75.367,0,48.58,0z M48.58,86.823    c-21.087,0-38.244-17.155-38.244-38.243S27.493,10.337,48.58,10.337S86.824,27.492,86.824,48.58S69.667,86.823,48.58,86.823z" data-original="#000000" class="active-path"/>
+					<path d="M73.898,47.08H52.066V20.83c0-2.209-1.791-4-4-4c-2.209,0-4,1.791-4,4v30.25c0,2.209,1.791,4,4,4h25.832    c2.209,0,4-1.791,4-4S76.107,47.08,73.898,47.08z" data-original="#000000" class="active-path"/>
+				</g>
+		</symbol>
+		<symbol id = "instagram" viewBox="0 0 97.395 97.395">
+				<g>
+					<path d="M12.501,0h72.393c6.875,0,12.5,5.09,12.5,12.5v72.395c0,7.41-5.625,12.5-12.5,12.5H12.501C5.624,97.395,0,92.305,0,84.895
+						V12.5C0,5.09,5.624,0,12.501,0L12.501,0z M70.948,10.821c-2.412,0-4.383,1.972-4.383,4.385v10.495c0,2.412,1.971,4.385,4.383,4.385
+						h11.008c2.412,0,4.385-1.973,4.385-4.385V15.206c0-2.413-1.973-4.385-4.385-4.385H70.948L70.948,10.821z M86.387,41.188h-8.572
+						c0.811,2.648,1.25,5.453,1.25,8.355c0,16.2-13.556,29.332-30.275,29.332c-16.718,0-30.272-13.132-30.272-29.332
+						c0-2.904,0.438-5.708,1.25-8.355h-8.945v41.141c0,2.129,1.742,3.872,3.872,3.872h67.822c2.13,0,3.872-1.742,3.872-3.872V41.188
+						H86.387z M48.789,29.533c-10.802,0-19.56,8.485-19.56,18.953c0,10.468,8.758,18.953,19.56,18.953
+						c10.803,0,19.562-8.485,19.562-18.953C68.351,38.018,59.593,29.533,48.789,29.533z"/>
+				</g>
+		</symbol>
+		<symbol id = "wifi" viewBox="0 0 512 512">
+				<g>
+					<g>
+						<path d="M10.667,0C4.779,0,0,4.779,0,10.667V96c0,5.888,4.779,10.667,10.667,10.667c217.621,0,394.667,177.045,394.667,394.667
+								c0,5.888,4.779,10.667,10.667,10.667h85.333c5.888,0,10.667-4.779,10.667-10.667C512,224.896,287.104,0,10.667,0z"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M10.667,170.667C4.779,170.667,0,175.445,0,181.333v85.333c0,5.888,4.779,10.667,10.667,10.667
+								c123.52,0,224,100.48,224,224c0,5.888,4.779,10.667,10.667,10.667h85.333c5.888,0,10.667-4.779,10.667-10.667
+								C341.333,318.997,193.003,170.667,10.667,170.667z"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<circle cx="74.667" cy="437.333" r="74.667"/>
+					</g>
+				</g>
+		</symbol>
+	</svg>
+	<header>
+		<nav class="nav">
+			<div class="wrapp_menu">
+				<div class="logo_menu">
+					<img src="img/logo.png">
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="#home" class="active">HOME</a></li>
+						<li><a href="#ourServices">SERVICE</a></li>
+						<li><a href="#ourTeam">TEAM</a></li>
+						<li><a href="#our_gallery">GALLERY</a></li>
+						<li><a href="#ourPrice">PRICE</a></li>
+						<li><a href="#ourContact">CONTACT</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</nav>
+	</header>
+	<section id="home" class="menuSpy">
+		<div class="wrrap_base_slider">
+			<div class="base_slider">
+				<div class="wrapp_slider">
+ 					<div class="one_div">ROBOT<span class="X1">X1</span><br><span class="text_slider">WEB DEVELOPMENT SOLUTIONS</span></div>
+ 					<div class="two_div">ROBOT<span class="X1">X2</span><br><span class="text_slider">WEB DEVELOPMENT SOLUTIONS</span></div>
+ 					<div class="three_div">ROBOT<span class="X1">X3</span><br><span class="text_slider">WEB DEVELOPMENT SOLUTIONS</span></div>
+ 				</div>
+ 			</div>
+ 			<div class="button">
+ 				<input class="button_active" type="submit" id="butt1" value="">
+ 				<input type="submit" id="butt2" value="">
+ 				<input type="submit" id="butt3" value="">
+ 			</div>	
+		</div>
+	</section>
+	<section id="our_services" class="menuSpy">
+		<h1 id="ourServices">OUR <span> SERVICES</span></h1>
+		<div class="wrrap_items_services">
+			<div class="wrrap_item_services">
+				<img src="icon/monitor.png">
+				<h3>RESPONSIVE DESIGN</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+				<a href="">MORE</a>
+			</div>
+			<div class="wrrap_item_services">
+				<img src="icon/world.png">
+				<h3>WEB DEVELOPMENT</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+				<a href="">MORE</a>
+			</div>
+			<div class="wrrap_item_services">
+				<img src="icon/cloud.png">
+				<h3>WEB HOSTING</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+				<a href="">MORE</a>
+			</div>
+			<div class="wrrap_item_services">
+				<img src="icon/cell-phone.png">
+				<h3>MOBILE APPS</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+				<a href="">MORE</a>
+			</div>
+		</div>
+	</section>
+	<section id="our_team" class="menuSpy">
+		<h1 id="ourTeam">OUR <span> TEAM</span></h1>
+		<div class="wrrap_items_team">
+			<div class="wrrap_item_team">
+				<div class="wrrap_photo">
+					<img src="img/team1.jpg">
+				</div>
+				<h2 class="employee_position">Web Designer</h2>
+				<p>Lorem ipsum dolor sit amet,</p>
+				<div class="wrrap_icons">
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#facebook'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#twitter'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#linkedin'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#google_plus'>
+							
+						</use>
+					</svg></a>
+				</div>
+			</div>
+			<div class="wrrap_item_team">
+				<div class="wrrap_photo">
+					<img src="img/team2.jpg">
+				</div>
+				<h2 class="employee_position">Web Designer</h2>
+				<p>Lorem ipsum dolor sit amet,</p>
+				<div class="wrrap_icons">
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#facebook'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#twitter'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#linkedin'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#google_plus'>
+							
+						</use>
+					</svg></a>
+				</div>
+				
+			</div>
+			<div class="wrrap_item_team">
+				<div class="wrrap_photo">
+					<img src="img/team3.jpg">
+				</div>
+				<h2 class="employee_position">Web Designer</h2>
+				<p>Lorem ipsum dolor sit amet,</p>
+				<div class="wrrap_icons">
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#facebook'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#twitter'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#linkedin'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#google_plus'>
+							
+						</use>
+					</svg></a>
+				</div>
+				
+			</div>
+			<div class="wrrap_item_team">
+				<div class="wrrap_photo">
+					<img src="img/team4.jpg">
+				</div>
+				<h2 class="employee_position">Web Designer</h2>
+				<p>Lorem ipsum dolor sit amet,</p>
+				<div class="wrrap_icons">
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#facebook'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#twitter'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#linkedin'>
+							
+						</use>
+					</svg></a>
+					<a href=""><svg class = 'classIcon'>
+						<use xlink:href = '#google_plus'>
+							
+						</use>
+					</svg></a>
+				</div>
+			</div>
+		</div>
+		<h1>SKILL</h1>
+		<div class="wrrap_skill">
+			<div>
+				<div class="nameSkill">
+					WordPress
+				</div>
+				<div class="lineSkill">
+					<div class="line1">
+						
+					</div>
+					<div class="line2">
+						
+					</div>
+				</div>
+				<div class="percentSkill">
+					80%
+				</div>
+			</div>
+			<div>
+				<div class="nameSkill">
+					HTML5
+				</div>
+				<div class="lineSkill">
+					<div class="line3">
+						
+					</div>
+					<div class="line4">
+						
+					</div>
+				</div>
+				<div class="percentSkill">
+					90%
+				</div>
+			</div>
+			<div>
+				<div class="nameSkill">
+					CSS3
+				</div>
+				<div class="lineSkill">
+					<div class="line5">
+						
+					</div>
+					<div class="line6">
+						
+					</div>
+				</div>
+				<div class="percentSkill">
+					85%
+				</div>
+			</div>
+			<div>
+				<div class="nameSkill">
+					RESPONSIVE DESIGN
+				</div>
+				<div class="lineSkill">
+					<div class="line7">
+						
+					</div>
+					<div class="line8">
+						
+					</div>
+				</div>
+				<div class="percentSkill">
+					80%
+				</div>
+		</div>
+	</section>
+	<section id="our_gallery" class="menuSpy">
+		<div class="wrappModalWindow">
+				<div class="oneModal">
+					<img src="img/gl1.jpg">
+				</div>
+				<div class="twoModal">
+					<img src="img/gl2.jpg">
+				</div>
+				<div class="threeModal">
+					<img src="img/gl3.jpg">
+				</div>
+				<div class="forModal">
+					<img src="img/gl4.jpg">
+				</div>
+				<div class="fiveModal">
+					<img src="img/gl5.jpg">
+				</div>
+				<div class="sixModal">
+					<img src="img/gl6.jpg">
+				</div>
+				<div class="sevenModal">
+					<img src="img/gl7.jpg">
+				</div>
+				<div class="eightModal">
+					<img src="img/gl8.jpg">
+				</div>
+				<div class="nineModal">
+					<img src="img/gl9.jpg">
+				</div>
+				<div class="tenModal">
+					<img src="img/gl10.jpg">
+				</div>
+			</div>
+		<h1 id="ourTeam">OUR <span> GALLERY</span></h1>
+		<p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Fugiat Nulla Pariatur. Excepteur Sint Occaecat Cupidatat Nonenim Ad Minim Veniam, Proident, Sunt In Culpa Qui Officia Deserunt.</p>
+		<div class="menu_gallery">
+			<a id="gallery_all">ALL</a>
+			<a id="corporate_website">CORPORATE WEB SITE</a>
+			<a id="responsive_design">RESPONSIVE DESIGN</a>
+			<a id="mobile_apps">MOBILE APPS</a>
+			<a id="worgpress_apps">WORDPRESS THEME</a>
+			<a id="web_hosting">WEB HOSTING</a>
+		</div>
+		<div class="wrapp_portfolio">
+				<div id="gallery_all corporate_website worgpress_apps">
+					<img src="img/gl1.jpg">
+					<div><a class="oneModal"><img src="img/search.png"></a></div>
+				</div>
+				<div id="gallery_all corporate_website">
+					<img src="img/gl2.jpg">
+					<div><a class="twoModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_three" id="gallery_all responsive_design worgpress_apps">
+					<img src="img/gl3.jpg">
+					<div><a class="threeModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_for" id="gallery_all responsive_design web_hosting">
+					<img src="img/gl4.jpg">
+					<div><a class="forModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_five" id="gallery_all corporate_website responsive_design">
+					<img src="img/gl5.jpg">
+					<div><a class="fiveModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_six" id="gallery_all responsive_design web_hosting">
+					<img src="img/gl6.jpg">
+					<div><a class="sixModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_seven" id="gallery_all mobile_apps worgpress_apps">
+					<img src="img/gl7.jpg">
+					<div><a class="sevenModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_eight" id="gallery_all corporate_website web_hosting">
+					<img src="img/gl8.jpg">
+					<div><a class="eightModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_nine" id="gallery_all mobile_apps">
+					<img src="img/gl9.jpg">
+					<div><a class="nineModal"><img src="img/search.png"></a></div>
+				</div>
+				<div class="portfolio_ten" id="gallery_all mobile_apps worgpress_apps">
+					<img src="img/gl10.jpg">
+					<div><a class="tenModal"><img src="img/search.png"></a></div>
+				</div>
+		</div>
+	</section>
+	<section id="ourPrice" class="menuSpy">
+		<h1 id="ourTeam">OUR <span> PRICE</span></h1>
+		<div class="wrrap_price">
+			<div>
+				<div class="wrrap_package">
+					<div class="package">
+						<p>Pro Package</p>
+						<svg>
+							<use xlink:href = '#bulb'>
+								
+							</use>
+						</svg>
+					</div>	
+					<div class="price">
+						<div class="dollar">
+							$
+						</div>
+						<div class="money">
+							99
+						</div>
+						<div class="wrrap_month">
+							<p class="month">/month</p>
+						</div>
+					</div>
+				</div>
+				<div class="shortList">
+					<p>Lorem ipsum dolor sit</p>
+					<p>Amet, consectetur</p>
+					<p>Dipiscing elit sed</p>
+					<p>Musmod tempor</p>
+					<p>Vcididunt ut labore</p>			
+				</div>
+				<div class="priceButton">
+					<a href="">SUBSCRIBE NOW</a>
+				</div>
+			</div>
+			<div>
+				<div class="wrrap_package">
+					<div class="package">
+						<p>Standard Package</p>
+						<svg>
+							<use xlink:href = '#world'>
+								
+							</use>
+						</svg>
+					</div>
+					<div class="price">
+						<div class="dollar">
+							$
+						</div>
+						<div class="money">
+							110
+						</div>
+						<div class="wrrap_month">
+							<p class="month">/month</p>
+						</div>
+					</div>
+				</div>
+				<div class="shortList">
+					<p>Lorem ipsum dolor sit</p>
+					<p>Amet, consectetur</p>
+					<p>Dipiscing elit sed</p>
+					<p>Musmod tempor</p>
+					<p>Vcididunt ut labore</p>			
+				</div>
+				<div class="priceButton">
+					<a href="">SUBSCRIBE NOW</a>
+				</div>
+			</div>
+			<div>
+				<div class="wrrap_package">
+					<div class="package">
+						<p>Basic Package</p>
+						<svg>
+							<use xlink:href = '#clock'>
+								
+							</use>
+						</svg>
+					</div>
+					<div class="price">
+						<div class="dollar">
+							$
+						</div>
+						<div class="money">
+							150
+						</div>
+						<div class="wrrap_month">
+							<p class="month">/month</p>
+						</div>
+					</div>
+				</div>
+				<div class="shortList">
+					<p>Lorem ipsum dolor sit</p>
+					<p>Amet, consectetur</p>
+					<p>Dipiscing elit sed</p>
+					<p>Musmod tempor</p>
+					<p>Vcididunt ut labore</p>			
+				</div>
+				<div class="priceButton">
+					<a href="">SUBSCRIBE NOW</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="ourContact" class="menuSpy">
+		<h1 id="ourTeam">OUR <span> CONTACT</span></h1>
+		<div id="map">
+			
+		</div>
+		<div class="wrrap_form">
+			<form action="#" method="post">
+				<div class="dataOfClient">
+					<div>
+						<p>Your Name</p>
+						<input type="text" name="nameClient" placeholder="Your Name">
+					</div>
+					<div>
+						<p>Your Email</p>
+						<input type="text" name="emailClient" placeholder="Your Email" autocomplete="on">
+					</div>
+					<div>
+						<p>Your Number</p>
+						<input type="email" name="" placeholder="Your Number">
+					</div>
+				</div>
+				<div class="MassageClient">
+					<p>Your Massage</p>
+					<textarea name="text">
+						
+					</textarea>
+				</div>
+				<div>
+					<button class="send_form" type="submit">Send</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<div class="footer_wrapp">
+			<div class="footer_logo">
+				<img src="img/fo-logo.png">
+			</div>
+			<div class="footer_text">
+				<span>© Copyright 2014 - 2015, All Rights Reserved, Designed by: www.designoatmeal.com</span>
+			</div>
+			<div class="footer_icons">
+				<div>
+					<a href="">
+						<svg class = 'footer_icon'>
+							<use xlink:href = '#facebook'>
+								
+							</use>
+						</svg>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<svg class = 'footer_icon'>
+							<use xlink:href = '#twitter'>
+								
+							</use>
+						</svg>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<svg class = 'footer_icon'>
+							<use xlink:href = '#instagram'>
+								
+							</use>
+						</svg>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<svg class = 'footer_icon'>
+							<use xlink:href = '#google_plus'>
+								
+							</use>
+						</svg>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<svg class = 'footer_icon'>
+							<use xlink:href = '#wifi'>
+								
+							</use>
+						</svg>
+					</a>
+				</div>			
+			</div>
+		</div>
+	</footer>
+
+    <script async defer
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdCOOfxdu9Ly_45RK7J4XDch35ZKGReKQ&callback=initMap">
+    </script>
+<script type="text/javascript" src="project1.js"></script>
+</body>
+</html>
