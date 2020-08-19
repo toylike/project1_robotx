@@ -29,28 +29,28 @@ window.addEventListener('scroll', function(){
 
 
 
-let butt1 = document.querySelector('#butt1');
-let butt2 = document.querySelector('#butt2');
-let butt3 = document.querySelector('#butt3');
-let wrapp = document.querySelector('.wrapp_slider');
+let first_slider = document.querySelector('#first_slider');
+let second_slider = document.querySelector('#second_slider');
+let third_slider = document.querySelector('#third_slider');
+let wrapp_slider = document.querySelector('.wrapp_slider');
 
-butt1.addEventListener('click', function(){
-	butt1.style.backgroundColor = 'black';
-	wrapp.style.marginLeft = 0 + 'px';
-	butt3.style.backgroundColor = 'white';
-	butt2.style.backgroundColor = 'white';
+first_slider.addEventListener('click', function(){
+	first_slider.style.backgroundColor = 'black';
+	wrapp_slider.style.marginLeft = 0 + 'px';
+	third_slider.style.backgroundColor = 'white';
+	second_slider.style.backgroundColor = 'white';
 })
-butt2.addEventListener('click', function(){
-	butt2.style.backgroundColor = 'black';
-	wrapp.style.marginLeft = '-100%';
-	butt1.style.backgroundColor = 'white';
-	butt3.style.backgroundColor = 'white';
+second_slider.addEventListener('click', function(){
+	second_slider.style.backgroundColor = 'black';
+	wrapp_slider.style.marginLeft = '-100%';
+	first_slider.style.backgroundColor = 'white';
+	third_slider.style.backgroundColor = 'white';
 })
-butt3.addEventListener('click', function(){
-	butt3.style.backgroundColor = 'black';
-	wrapp.style.marginLeft = '-200%';
-	butt1.style.backgroundColor = 'white';
-	butt2.style.backgroundColor = 'white';
+third_slider.addEventListener('click', function(){
+	third_slider.style.backgroundColor = 'black';
+	wrapp_slider.style.marginLeft = '-200%';
+	first_slider.style.backgroundColor = 'white';
+	second_slider.style.backgroundColor = 'white';
 })
 
 
@@ -93,14 +93,14 @@ for(let buttonModalWindow of buttonsModalWindow){
 
 
 function initMap() {
-			  
+
 		 var uluru = {lat: 50.4439974, lng: 30.5390631};
 		 var map = new google.maps.Map(document.getElementById('map'), {
-	      	zoom: 8, 
+	      	zoom: 8,
 	      	center: uluru
     	 });
 		 var marker = new google.maps.Marker({
-			position: 
+			position:
 			uluru, map: map
 		});
 }
