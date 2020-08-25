@@ -1,4 +1,4 @@
-let anchors = document.querySelectorAll('.menu a[href*="#"]');
+let anchors = document.querySelectorAll('.nav_menu a[href*="#"]');
 for(let anchor of anchors){
 	if(anchor){
 		anchor.addEventListener('click', function(e){
@@ -29,33 +29,33 @@ window.addEventListener('scroll', function(){
 
 
 
-let first_slider = document.querySelector('#first_slider');
-let second_slider = document.querySelector('#second_slider');
-let third_slider = document.querySelector('#third_slider');
-let wrapp_slider = document.querySelector('.wrapp_slider');
+let first_slider = document.querySelector('#slider_first');
+let second_slider = document.querySelector('#slider_second');
+let third_slider = document.querySelector('#slider_third');
+let slider_wrrap = document.querySelector('.slider_wrrap');
 
 first_slider.addEventListener('click', function(){
 	first_slider.style.backgroundColor = 'black';
-	wrapp_slider.style.marginLeft = 0 + 'px';
+	slider_wrrap.style.marginLeft = 0 + 'px';
 	third_slider.style.backgroundColor = 'white';
 	second_slider.style.backgroundColor = 'white';
 })
 second_slider.addEventListener('click', function(){
 	second_slider.style.backgroundColor = 'black';
-	wrapp_slider.style.marginLeft = '-100%';
+	slider_wrrap.style.marginLeft = '-100%';
 	first_slider.style.backgroundColor = 'white';
 	third_slider.style.backgroundColor = 'white';
 })
 third_slider.addEventListener('click', function(){
 	third_slider.style.backgroundColor = 'black';
-	wrapp_slider.style.marginLeft = '-200%';
+	slider_wrrap.style.marginLeft = '-200%';
 	first_slider.style.backgroundColor = 'white';
 	second_slider.style.backgroundColor = 'white';
 })
 
 
-let elemsGallery = document.querySelectorAll('.menu_gallery > a');
-let elemsPortfolio = document.querySelectorAll('.wrapp_portfolio > div');
+let elemsGallery = document.querySelectorAll('.gallery_menu > a');
+let elemsPortfolio = document.querySelectorAll('.gallery_portfolio > div');
 
 for(let elemGallery of elemsGallery){
 	elemGallery.addEventListener('click',function(){
@@ -71,8 +71,8 @@ for(let elemGallery of elemsGallery){
 	})
 }
 
-let buttonsModalWindow = document.querySelectorAll('.wrapp_portfolio > div > div > a');
-let modalsWindow = document.querySelectorAll('.wrappModalWindow > div');
+let buttonsModalWindow = document.querySelectorAll('.gallery_portfolio > div > div > a');
+let modalsWindow = document.querySelectorAll('.gallery_modalWindow > div');
 
 for(let buttonModalWindow of buttonsModalWindow){
 	buttonModalWindow.addEventListener('click', function(){
@@ -91,9 +91,9 @@ for(let buttonModalWindow of buttonsModalWindow){
 })
 }
 
-let burgerMenuButton = document.querySelector('.burger_menu_button');
-	let navBurgerMenu = document.querySelector('.nav_burger_menu');
-	let burgerMenu = document.querySelector('.burger_menu');
+	let burgerMenuButton = document.querySelector('.burger_button');
+	let navBurgerMenu = document.querySelector('.burger_menu');
+	let burgerMenu = document.querySelector('.nav_burger');
 	
 	function checkDropMenu(x){
 
@@ -126,7 +126,7 @@ let burgerMenuButton = document.querySelector('.burger_menu_button');
 function initMap() {
 
 		 var uluru = {lat: 50.4439974, lng: 30.5390631};
-		 var map = new google.maps.Map(document.getElementById('map'), {
+		 var map = new google.maps.Map(document.getElementById('contact_map'), {
 	      	zoom: 8,
 	      	center: uluru
     	 });
