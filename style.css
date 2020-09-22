@@ -190,7 +190,7 @@ h3{
 	width: 300%;
 	position: absolute;
 	display: flex;
-	transition: all ease 1s; 
+	transition: all ease 1s;
 }
 .slider_wrrap > div{
 	margin-top: 10px;
@@ -514,7 +514,7 @@ h3{
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%,-50%);
-} 
+}
 .gallery_portfolio > div > div > a{
 	padding: 0px 7px 0px 7px;
 	background: black;
@@ -584,7 +584,7 @@ h3{
 }
 .price_package:hover{
 	background: rgba(51,51,51);
-} 
+}
 .price_package_name > p{
 	color: white;
 	font-size: 22px;
@@ -806,15 +806,21 @@ footer{
 	.nav_wrrap{
 		width: 100%;
 	}
+	.nav_container{
+		width: 100%;
+	}
 	.burger{
 		display: block;
 		height: 100%;
-		width: 50%;
+		width: 20%;
 		background-color: rgba(118,122,120);
 	}
+	.burger_button{
+		right: 15px;
+	}
 	.nav_logo{
-		padding-left: 20px;
-		width: 50%;
+		padding-left: 15px;
+		width: 80%;
 		background-color: rgba(118,122,120);
 	}
 	.nav_menu{
@@ -850,5 +856,54 @@ footer{
 	}
 	.nav{
 		background-color: rgba(118,122,120);
+	}
+}
+
+@media (max-width: 900px){
+	.services_items{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.services_items .services_item{
+		max-width: 60%;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 600px){
+	.gallery_menu{
+		flex-direction: column;
+		align-items: center;
+	}
+	.gallery_menu a{
+		font-size: 13px;
+		padding: 10px 6px 10px 6px;
+		max-width: 60%;
+		width: 100%;
+	}
+}
+@media (max-width: 600px){
+	.team_skill{
+		font-size: 15px;
+	}
+	.team_skill > div{
+		flex-direction: column;
+	}
+	.skill .skill_bar{
+		width: 100%;
+		height: 20px;
+	}
+	.skill_percent{
+		margin-left: auto;
+	}
+	.slider_container {
+		font-size: 55px;
+	}
+	.slider_text{
+		font-size: 23px;
+	}
+	.slider_button > input{
+		width: 80px;
 	}
 }
