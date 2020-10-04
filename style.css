@@ -870,6 +870,9 @@ footer{
 		width: 100%;
 		margin-bottom: 30px;
 	}
+	.team_item{
+		margin-bottom: 20px;
+	}
 }
 @media (max-width: 600px){
 	.gallery_menu{
@@ -882,8 +885,14 @@ footer{
 		max-width: 60%;
 		width: 100%;
 	}
-}
-@media (max-width: 600px){
+	.services_items .services_item{
+		max-width: 80%;
+		width: 100%;
+	}
+	.team_items{
+		flex-direction: column;
+		align-items: center;
+	}
 	.team_skill{
 		font-size: 15px;
 	}
@@ -905,5 +914,17 @@ footer{
 	}
 	.slider_button > input{
 		width: 80px;
+	}
+	.price_package_name > p{
+		font-size: 20px;
+	}
+	.cost_dollar{
+		font-size: 20px;
+	}
+	.cost_money{
+		font-size: 55px;
+	}
+	.cost_month{
+		font-size: 20px;
 	}
 }
